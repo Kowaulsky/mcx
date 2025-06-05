@@ -1,0 +1,31 @@
+name: Auditium
+version: '1.0-SNAPSHOT'
+main: me.kowaulsky.auditium.Auditium
+api-version: '1.20'
+prefix: AUDITIUM
+load: STARTUP
+authors: [ Kowaulsky ]
+description: Advanced Minecraft logger with built-in web dashboard and MySQL integration.
+website: https://github.com/Kowaulsky/auditium
+
+commands:
+  generatelink:
+    description: Generates a temporary web link to view server logs.
+    usage: /generatelink
+    permission: auditium.generatelink
+  addpaneluser:
+    description: Adds a new user to the web panel.
+    usage: /addpaneluser <username> <password>
+    permission: auditium.admin.paneluser
+  removepaneluser:
+    description: Removes a user from the web panel.
+    usage: /removepaneluser <username>
+    permission: auditium.admin.paneluser
+
+permissions:
+  auditium.generatelink:
+    description: Allows users to generate a web link for logs.
+    default: op
+  auditium.admin.paneluser:
+    description: Allows users to manage web panel users.
+    default: op

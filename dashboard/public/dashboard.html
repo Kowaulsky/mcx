@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditium</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Auditium</h2>
+            <button class="nav-button active" data-tab="command-logs">Commands</button>
+            <button class="nav-button" data-tab="interaction-logs">Interactions</button>
+            <button class="nav-button" data-tab="movement-logs">Movements</button>
+            <button class="nav-button" data-tab="chat-logs">Chat</button>
+            <button class="nav-button" data-tab="other-logs">Other</button>
+        </div>
+        <div class="main-content">
+            <div class="filters">
+                <input type="date" id="date-filter" placeholder="Filter by date">
+                <input type="text" id="player-filter" placeholder="Filter by player">
+                <input type="text" id="keyword-filter" placeholder="Filter by keyword">
+                <button id="refresh-button" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Refresh</button>
+            </div>
+            <div class="tab-content">
+                <div id="command-logs" class="tab-pane active">
+                    <table class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Player</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="interaction-logs" class="tab-pane">
+                    <table class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Player</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="movement-logs" class="tab-pane">
+                    <table class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Player</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="chat-logs" class="tab-pane">
+                    <table class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Player</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="other-logs" class="tab-pane">
+                    <table class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Player</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <button id="prev-page" class="bg-gray-300 p-2 rounded disabled:opacity-50">Previous</button>
+                    <span id="page-info">Page 1 of 1</span>
+                    <button id="next-page" class="bg-gray-300 p-2 rounded disabled:opacity-50">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 p-6 rounded shadow-lg">
+            <h2 class="text-xl text-white mb-4">Login to Auditium</h2>
+            <input id="username" type="text" placeholder="Username" class="border p-2 mb-4 w-full rounded">
+            <input id="password" type="password" placeholder="Password" class="border p-2 mb-4 w-full rounded">
+            <button id="login-button" class="bg-blue-500 text-white p-2 rounded w-full hover:bg-blue-600">Login</button>
+            <p id="login-error" class="text-red-500 mt-2 hidden"></p>
+        </div>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

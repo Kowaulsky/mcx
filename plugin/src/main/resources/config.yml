@@ -1,0 +1,8 @@
+database:
+  host: "localhost"
+  port: 3306
+  name: "auditium"
+  username: "root"
+  password: ""
+web:
+  port: 8080

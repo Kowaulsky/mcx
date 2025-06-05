@@ -1,0 +1,10 @@
+Auditium est un plugin avancé de journalisation pour serveurs Minecraft, conçu pour capturer chaque action importante des joueurs (commandes, interactions, mouvements, etc.) et les stocker dans une base de données MySQL.
+
+Il intègre un dashboard web complet directement dans le plugin, accessible depuis un navigateur, permettant :
+Une consultation claire et rapide des logs,
+Des filtres dynamiques (par joueur, type d’action, date...),
+Une interface moderne, intuitive et accessible sans configuration externe.
+
+Idéal pour les administrateurs souhaitant surveiller, auditer ou enquêter facilement sans passer par la console.
+
+The dashboard itself is included into the jar file (along with the HTML pages etc) and is ran using Ktor.
